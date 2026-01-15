@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Comic Sans MS", "Comic Neue", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Couleurs Carambar */
+  --color-carambar-yellow: #FFD700;
+  --color-carambar-red: #E63946;
+  --color-carambar-blue: #1D3557;
+  --color-carambar-orange: #F77F00;
+  --color-carambar-light: #FFF8DC;
+}
+
+html,
+body {
+  @apply bg-carambar-light text-carambar-blue;
+}
+
+/* Animations */
+@keyframes bounce-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* 3D Card Flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
